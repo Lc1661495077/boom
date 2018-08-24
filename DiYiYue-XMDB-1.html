@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*通配符*/
+	*{
+		margin:0;
+		padding: 0;
+	}
+	/*头部*/
+		.top{
+			width: 100%;
+			height:45px;
+			background-color: black;
+			/*border: 1px solid red*/
+		}
+		.link{
+			height: 35px;
+			line-height: 45px;
+		}
+		.top_xiala {
+			margin-left: 400px;
+		}
+		 .top_xiala a{
+			text-decoration: none;
+			color: white
+		}
+		.top_xiala li{
+			display: inline-block;
+			margin-left: 45px;
+			font-size: 15px;
+		}
+		.top_sub{
+			display: none;
+		}
+		.link:hover .top_sub {
+			display: block;
+		}
+		.link{
+			position: relative;
+			display: block;
+		}
+		.top_sub{
+			position: absolute;
+			top: 30px;
+			left: -445px;
+			width: 1900px;
+			height: 230px;
+			background-color: black;
+		}
+		.sub1{
+			margin-top: -20px;
+		}
+		.top .top_xiala .top_sub li{
+			margin-left:445px;
+		}
+		
+		.top_sup{
+			display: none;
+		}
+		.sup:hover .top_sup {
+			display: block;
+		}
+		.sup{
+			position: relative;
+			display: block;
+		}
+		.top_sup{
+			position: absolute;
+			top: 30px;
+			left: -565px;
+			width: 1900px;
+			height: 225px;
+			background-color: black;
+		}
+		.top .top_xiala .top_sup li{
+			margin-left:565px;
+		}
+		.sup1{
+			margin-top: 21px;
+		}
+		.top_subp{
+			display: none;
+		}
+		.subp:hover .top_subp {
+			display: block;
+		}
+		.subp{
+			position: relative;
+			display: block;
+		}
+		.top_subp{
+			position: absolute; 
+			top: 30px;
+			left: -655px;
+			width: 1900px;
+			height: 225px;
+			background-color: black;
+		}
+		.top .top_xiala .top_subp li{
+			margin-left:655px;
+		}
+		.subp1{
+			margin-top: 21px;
+		}
+		/*图片*/
+		.tu{
+			width: 100%;
+			height: 650px;
+			background:url(pngs/0.jpg);
+			background-size: cover;
+		}
+		/*中间部分*/
+		.center_bottom{
+			width: 100%;
+			height: 250px;
+			/*border: 1px solid red;*/
+			margin-top: 10px;
+		}
+		.center_box1,.center_box2,.center_box3,.center_box4{
+			width: 24%;
+			height: 250px;
+			/*background-color: red;*/
+			float: left;
+			margin-left: 1%;
+			
+		}
+		.png101{
+			width: 100%;
+			height:100%;
+		}
+		.center_box1{
+			background: url(pngs/101.png);
+			background-size: cover;
+		}
+		.center_box1:hover{
+			background: url(pngs/101-2.png);
+			background-size: cover;
+		}
+		.center_box2{
+			background: url(pngs/102.png);
+			background-size: cover;
+		}
+		.center_box2:hover{
+			background: url(pngs/102-2.png);
+			background-size: cover;
+		}
+		.center_box3{
+			background: url(pngs/103.png);
+			background-size: cover;
+		}
+		.center_box3:hover{
+			background: url(pngs/103-2.png);
+			background-size: cover;
+		}
+		.center_box4{
+			background: url(pngs/104.png);
+			background-size: cover;
+		}
+		.center_box4:hover{
+			background: url(pngs/104-2.png);
+			background-size: cover;
+		}
+		.top_xiala a:hover{
+			color: gray;
+		}
+		.qiang{
+			clear: both;
+		}
+		/*下半部分*/
+		.bottom{
+			width: 100%;
+			height: 300px;
+			/*border: 1px solid red;*/
+
+		}
+		.bottom_left{
+			width: 100px;
+			height:220px;
+			/*border: 1px solid red;*/
+			float: left;
+			margin-left:14px；
+		}
+		.renmen #lc,#lc1,#lc2,#lc3,#lc4{
+			font-size: 15px;
+		}
+		.bottom_left {
+			margin-left: 50px;
+			margin-top:50px;	
+
+		}
+		.bottom_left1{
+			width: 100px;
+			height:400px;
+			margin-left: 150px;
+			margin-top: 50px; 
+			float: left;
+		}
+		.bottom .bottom_left li,.bottom .bottom_left1 li {
+			list-style: none;
+		}
+		.bottom .bottom_left li a,.bottom .bottom_left1 li a{
+			
+			text-decoration: none;
+			font-size: 15px;
+			color: gray;
+		}
+		.bottom .bottom_left li a:hover,.bottom .bottom_left1 li a:hover{
+			color: #0087cd;
+
+		}
+		.bottom_right{
+			width: 500px;
+			height: 300px;
+			float: right;
+			/*border: 1px solid red;*/
+			text-align: center;
+		}
+		.bottom_right_zi{
+			width: 200px;
+			height: 100px;
+			margin: 0 auto;
+			margin-top: 100px;
+		}
+		.zi1{
+			margin-top: 150px;
+			font-size: 12px;
+			color: gray;
+		}
+		.zi2{
+			font-size: 25px;
+			color: gray;
+		}
+		button{
+			width: 120px;
+			height:30px;
+			background-color: white;
+			border: 1px solid rgb(0,141,220);
+			border-radius: 30px;
+		}
+		button:hover{
+			background-color: rgb(0,141,220);
+		}
+		button .zi3{
+			color: rgb(0,141,220);
+			text-decoration: none;
+
+		}
+		button .zi3:hover{
+			color: white;
+		}
+		.bottom_bottom{
+			width: 100%;
+			height: 35px;
+			/*border: 1px solid red;	*/
+			margin-top:-100px;
+		}
+		.bottom_bottom_box{
+			width: 1100px;
+			height: 35px;
+			/*border: 1px solid red;*/
+			margin: 0 auto;
+			text-align: center;	
+		}
+		.zi4{
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+<div class="top">
+      <ul class="top_xiala">
+         <li class="link">
+         <a href="#">Xpaly系列
+         	<ul class="top_sub">
+         		<li class="sub1">
+         		<a href="#">Xpaly6
+         		</a>
+         		</li>
+         		<br>
+         		<li class="sub1">
+         		<a href="#">Xpaly5旗舰版
+         		</a>
+         		</li>
+         		<br>
+         		<li class="sub1">
+         		<a href="#">Xpaly5
+         		</a>
+         		</li>
+         		<br>
+         		<li class="sub1">
+         		<a href="#">Xpaly3s
+         		</a>
+         		</li>
+         		<br>
+         		<li class="sub1">
+         		<a href="#">Xpaly</a>
+         		</li>
+         		<br>
+         	</ul>
+         </a>
+         </li>
+         <li class="sup">
+         <a href="#">X系列
+         <ul class="top_sup">	
+         		<li class="sup1">
+         		<a href="#">X20
+         		</a>
+         		</li>
+         		<br>
+         		<li class="sup1">
+         		<a href="#">X20Plus
+         		</a>
+         		</li>
+         		<br>
+         		<li class="sup1">
+         		<a href="#">X9s
+         		</a>
+         		</li>
+         		<br>
+         		<li class="sup1">
+         		<a href="#">X9s Plus
+         		</a>
+         		</li>
+         		<br>
+         		<li class="sup1">
+         		<a href="#">X9Plus
+         		</a>
+         		</li>
+         	</ul>
+         </a>
+         </li>
+         <li class="subp">
+         <a href="#">Y系列
+         <ul class="top_subp">
+         		<li class="subp1">
+         		<a href="#">Y77
+         		</a>
+         		</li>
+         		<br>
+         		<li class="subp1">
+         		<a href="#">Y67
+         		</a>
+         		</li>
+         		<br>
+         		<li class="subp1">
+         		<a href="#">Y66
+         		</a>
+         		</li>
+         		<br>
+         		<li class="subp1">
+         		<a href="#">Y55
+         		</a>
+         		</li>
+         		<br>
+         		<li class="subp1">
+         		<a href="#">Y53
+         		</a>
+         		</li>
+         		<br>
+         	</ul>
+         </a>
+         </li>
+         <li>
+         <a href="#">商场
+         </a>
+         </li>
+         <li>
+         <a href="#">Funtouch OS
+         </a>
+         </li>
+         <li>
+         <a href="#">服务
+         </a>
+         </li>
+         <li>
+         <a href="#">社区
+         </a>
+         </li>
+      </ul>
+</div>
+	   <div class="center">
+	   	<div class="tu">
+	   	</div>
+	       <div class="center_bottom">
+	       		<div class="center_box1">
+	       		</div>
+	       		<div class="center_box2">
+	       		</div>
+	       		<div class="center_box3">
+	       		</div>
+	       		<div class="center_box4">
+	       </div>
+	       <div class="qiang"></div>
+	       	<div class="bottom">
+				<div class="bottom_left1">
+					<ul>
+						<li class="renmen"><b id="lc">热门链接</b></li>
+						<li>
+							<a href="#">X20Plus</a>
+						</li>
+						<li>
+							<a href="#">X20</a>
+						</li>
+						<li>
+							<a href="#">vivo摄影</a>
+						</li>
+
+						<li>
+							<a href="#">查找手机</a>
+						</li>
+						<li>
+							<a href="#">体验中心</a>
+						</li>
+						<li>
+							<a href="#">常见问题</a>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom_left">
+					<ul>
+						<li class="renmen"><b id="lc1">在线购买</b></li>
+						<li>
+							<a href="#">官方商城</a>
+						</li>
+						<li>
+							<a href="#">选购手机</a>
+						</li>
+						<li>
+							<a href="#">选购配件</a>
+						</li>
+						<li>
+							<a href="#">选购碎屏保</a>
+						</li>
+						<li>
+							<a href="#">服务保障</a>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom_left">
+					<ul>
+						<li class="renmen"><b id="lc2">服务支持</b></li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">服务首页</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">服务网点查询</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">真伪查询</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">服务政策</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">预约维修</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">维修配件价格</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="bottom_left">
+					<ul>
+						<li class="renmen"><b id="lc3">vivo社区</b></li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">社区首页</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">摄影专区</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">微博</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">贴吧</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">兴趣部落</a>
+						</li>		
+					</ul>
+				</div>
+				<div class="bottom_left">
+					<ul>
+						<li class="renmen"><b id="lc4">关于vivo</b></li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">vivo简介</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">工作机会</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">新闻资讯</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">采购平台</a>
+						</li>
+						<li>
+							<a href="DiYiYue-XMDB-ViVo-denglu.html">开发者平台</a>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom_right">
+						<div class="bottom_right_zi">
+					<span class="zi1">24小时全国服务热线	</span>
+					<br>
+					<span class="zi2">400-678-9688</span>
+						</div>
+						<div>
+							<button><a href="DiYiYue-XMDB-ViVo-denglu.html" class="zi3">在线客服</a></button>
+						</div>
+				</div>
+	       	</div>
+	   </div>
+	   <div class="qiang"></div>
+	   <div class="bottom_bottom">
+	   		<div class="bottom_bottom_box">
+	   <span class="zi4">Copyright ©2011-2017 广东步步高电子工业有限公司 版权所有 保留一切权利 | 隐私政策 | 法律声明 | 粤B2-20080267 | 粤ICP备05100288号</span><img src="pngs/guan.png">
+	   		</div>
+	   </div>
+</body>
+</html>
